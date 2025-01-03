@@ -5,8 +5,8 @@ export class RecipeContent {
   @PrimaryGeneratedColumn()
   id: number;
 
-  @Column()
-  recipe_id: number;
+  @Column({ nullable: true })
+  recipe_id: string;
 
   @Column()
   title: string;
@@ -16,6 +16,9 @@ export class RecipeContent {
 
   @Column()
   url: string;
+
+  @Column({ nullable: true })
+  thumbnail: string;
 
   @Column()
   author: string;

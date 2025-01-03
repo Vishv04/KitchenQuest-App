@@ -3,7 +3,7 @@ import { RecipesService } from './recipes.service';
 
 @Controller()
 export class RecipesController {
-  constructor(private readonly recipesService: RecipesService) {}
+  constructor(private readonly recipesService: RecipesService) { }
 
   @Get('sections/:sectionType/recipes')
   async getRecipesBySection(@Param('sectionType') sectionType: string) {
@@ -11,7 +11,7 @@ export class RecipesController {
   }
 
   @Get('recipes/:id')
-  async getRecipeDetails(@Param('id') id: number) {
+  async getRecipeDetails(@Param('id') id: string) {
     return this.recipesService.findDetailedRecipe(id);
   }
 }

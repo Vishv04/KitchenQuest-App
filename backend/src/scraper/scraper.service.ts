@@ -20,6 +20,14 @@ interface RecipeData {
   record_url: string;
 }
 
+function parseIngredient(ingredient: string) {
+  const match = ingredient.match(/^([\d./\s]+)?(.+)$/);
+  return {
+    quantity: match?.[1]?.trim() || '',
+    item: match?.[2]?.trim() || ingredient
+  };
+}
+
 @Injectable()
 export class ScraperService {
   private readonly dataFilePath = path.join(__dirname, '..', '..', 'data', 'data.json');
@@ -126,8 +134,10 @@ export class ScraperService {
 
       // Scrape detailed data from each record URL
       for (const recordUrl of recordUrls) {
-        const recipeId = recordUrl.split('-').pop(); // Extract the recipe ID from the URL
-        await this.scrapeDetailedRecipe(recordUrl, recipeId, allDetailedRecipes);
+        const recipeId = recordUrl.split('-').pop();
+        const recipe = allRecipes.find(r => r.recipe_id === recipeId);
+        const thumbnail = recipe ? recipe.thumbnail : '';
+        await this.scrapeDetailedRecipe(recordUrl, recipeId, thumbnail, allDetailedRecipes);
       }
 
       // Save detailed recipes to both file and database
@@ -140,32 +150,34 @@ export class ScraperService {
     }
   }
 
-  private async scrapeDetailedRecipe(recordUrl: string, recipeId: string, allDetailedRecipes: any[]) {
+  private async scrapeDetailedRecipe(
+    recordUrl: string, 
+    recipeId: string, 
+    thumbnail: string,
+    allDetailedRecipes: any[]
+  ) {
     try {
       console.log(`Scraping detailed recipe data from ${recordUrl}...`);
       const { data } = await axios.get(recordUrl);
-  
-      // Load the HTML into cheerio
+
       const $ = cheerio.load(data);
-  
-      // Extract JSON-LD data
       const jsonLd = $('script[type="application/ld+json"]').html();
       const recipeData = jsonLd ? JSON.parse(jsonLd) : null;
 
       const title = recipeData?.name;
-  
-      // Check if the recipe already exists based on the title
+
       const existingRecipe = allDetailedRecipes.find(recipe => recipe.title === title);
       if (existingRecipe) {
         console.log(`Recipe with title "${title}" already exists. Skipping...`);
-        return; // Skip adding this recipe if a duplicate is found
+        return;
       }
-  
+
       const detailedRecipe = {
         recipe_id: recipeId,
         title: recipeData?.name,
         description: recipeData?.description || '',
         url: recordUrl,
+        thumbnail: thumbnail,
         author: recipeData?.author || '',
         cookTime: recipeData?.cookTime || '',
         prepTime: recipeData?.prepTime || '',
@@ -181,37 +193,13 @@ export class ScraperService {
         instructions: recipeData?.recipeInstructions || [],
         recipeYield: recipeData?.recipeYield || '',
       };
-      
-      // Helper function to parse ingredients
-      function parseIngredient(ingredient) {
-        // Remove multiple spaces and trim
-        const cleanedIngredient = ingredient.replace(/\s{2,}/g, ' ').trim();
-      
-        // Split the string into quantity and item parts
-        const quantityMatch = cleanedIngredient.match(/^([\d/.\s]+)(.*)$/);
-        if (quantityMatch) {
-          return {
-            quantity: quantityMatch[1].trim(),
-            item: quantityMatch[2].trim(),
-          };
-        }
-      
-        // If no match for quantity, assume the whole string is the item
-        return {
-          quantity: '',
-          item: cleanedIngredient,
-        };
-      }
-      
-  
-      // Add the detailed recipe to the list
+
       allDetailedRecipes.push(detailedRecipe);
-  
       console.log(`Successfully scraped detailed data for recipe: ${title}`);
     } catch (error) {
       console.error(`Error scraping detailed data for ${recordUrl}:`, error);
     }
-}
+  }
 
   private async clearFile(filePath: string) {
     try {
@@ -270,13 +258,7 @@ export class ScraperService {
         .filter(recipe => recipe.recipe_id) // Filter out recipes with no ID
         .map(recipe => {
           const recipeEntity = new Recipe();
-          // Ensure recipe_id is a valid number
-          const parsedId = parseInt(recipe.recipe_id);
-          if (isNaN(parsedId)) {
-            console.warn(`Invalid recipe_id: ${recipe.recipe_id} for recipe: ${recipe.title}`);
-            return null;
-          }
-          recipeEntity.recipe_id = parsedId;
+          recipeEntity.recipe_id = recipe.recipe_id || ''; // Provide default empty string
           recipeEntity.title = recipe.title;
           recipeEntity.thumbnail = recipe.thumbnail;
           recipeEntity.section = recipe.section;
@@ -284,8 +266,7 @@ export class ScraperService {
           recipeEntity.submittedBy = recipe.submittedBy;
           recipeEntity.record_url = recipe.record_url;
           return recipeEntity;
-        })
-        .filter(entity => entity !== null); // Remove any null entities
+        });
 
       if (recipeEntities.length === 0) {
         console.warn('No valid recipes to save to database');
@@ -308,10 +289,11 @@ export class ScraperService {
       // Save new detailed recipes
       const detailedRecipeEntities = detailedRecipes.map(recipe => {
         const recipeContentEntity = new RecipeContent();
-        recipeContentEntity.recipe_id = parseInt(recipe.recipe_id);
+        recipeContentEntity.recipe_id = recipe.recipe_id;
         recipeContentEntity.title = recipe.title;
         recipeContentEntity.description = recipe.description;
         recipeContentEntity.url = recipe.url;
+        recipeContentEntity.thumbnail = recipe.thumbnail;
         recipeContentEntity.author = recipe.author;
         recipeContentEntity.cookTime = recipe.cookTime;
         recipeContentEntity.prepTime = recipe.prepTime;

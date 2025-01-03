@@ -17,7 +17,7 @@ export class RecipesService {
     return this.recipeRepository.find({ where: { section: sectionType } });
   }
 
-  async findDetailedRecipe(id: number): Promise<RecipeContent | undefined> {
+  async findDetailedRecipe(id: string): Promise<RecipeContent | undefined> {
     return this.recipeContentRepository.findOne({ where: { recipe_id: id } });
   }
 }
