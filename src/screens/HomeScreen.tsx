@@ -21,19 +21,19 @@ const SECTIONS = [
   {
     id: 'recommended',
     title: 'Recommended',
-    image: require('../assets/breakfast.jpg'),
+    image: require('../assets/recommended.png'),
     color: '#FF9F1C',
   },
   {
     id: 'trending',
     title: 'Trending',
-    image: require('../assets/lunch.jpg'),
+    image: require('../assets/trending.png'),
     color: '#2EC4B6',
   },
   {
     id: 'popular',
     title: 'Popular',
-    image: require('../assets/dinner.jpg'),
+    image: require('../assets/popular.jpg'),
     color: '#E71D36',
   },
 ];
@@ -46,39 +46,48 @@ type SideNavProps = {
   isDark: boolean;
 };
 
-const SideNav: React.FC<SideNavProps> = ({ isVisible, onClose, toggleTheme, isDark }) => (
-  <Animated.View style={[
-    styles.sideNav, 
-    { 
-      transform: [{ translateX: isVisible ? 0 : 300 }],
-      backgroundColor: isDark ? '#1F2937' : '#fff'
-    }
-  ]}>
-    <Pressable style={styles.closeButton} onPress={onClose}>
-      <Icon name="x" size={24} color={isDark ? '#fff' : '#000'} />
-    </Pressable>
-    <Pressable style={styles.themeToggle} onPress={toggleTheme}>
-      <Icon name={isDark ? 'sun' : 'moon'} size={24} color={isDark ? '#fff' : '#000'} />
-      <Text style={[styles.themeText, { color: isDark ? '#fff' : '#000' }]}>
-        {isDark ? 'Light Mode' : 'Dark Mode'}
-      </Text>
-    </Pressable>
-    <View style={styles.creatorInfo}>
-      <Text style={[styles.createdByText, { color: isDark ? '#a0a0a0' : '#666' }]}>
-        Created by
-      </Text>
-      <Pressable 
-        onPress={() => Linking.openURL('https://www.linkedin.com/in/vishv-boda-806ab5289')}
-        style={styles.creatorLink}
-      >
-        <Text style={[styles.creatorName, { color: isDark ? '#fff' : '#000' }]}>
-          Vishv Boda
-        </Text>
-        <Icon name="linkedin" size={20} color={isDark ? '#fff' : '#000'} />
+const SideNav: React.FC<SideNavProps> = ({ isVisible, onClose, toggleTheme, isDark }) => {
+  const translateX = useRef(new Animated.Value(300)).current; // Start off-screen
+
+  useEffect(() => {
+    Animated.timing(translateX, {
+      toValue: isVisible ? 0 : 300, // Move to 0 when visible, 300 when hidden
+      duration: 300, // Duration of the animation
+      useNativeDriver: true,
+    }).start();
+  }, [isVisible]);
+
+  return (
+    <Animated.View style={[styles.sideNav, { 
+        transform: [{ translateX }],
+        backgroundColor: isDark ? '#1F2937' : '#fff'
+    }]}>
+      <Pressable style={styles.closeButton} onPress={onClose}>
+        <Icon name="x" size={24} color={isDark ? '#fff' : '#000'} />
       </Pressable>
-    </View>
-  </Animated.View>
-);
+      <Pressable style={styles.themeToggle} onPress={toggleTheme}>
+        <Icon name={isDark ? 'sun' : 'moon'} size={24} color={isDark ? '#fff' : '#000'} />
+        <Text style={[styles.themeText, { color: isDark ? '#fff' : '#000' }]}>
+          {isDark ? 'Light Mode' : 'Dark Mode'}
+        </Text>
+      </Pressable>
+      <View style={styles.creatorInfo}>
+        <Text style={[styles.createdByText, { color: isDark ? '#a0a0a0' : '#666' }]}>
+          Created by
+        </Text>
+        <Pressable 
+          onPress={() => Linking.openURL('https://www.linkedin.com/in/vishv-boda-806ab5289')}
+          style={styles.creatorLink}
+        >
+          <Text style={[styles.creatorName, { color: isDark ? '#fff' : '#000' }]}>
+            Vishv Boda
+          </Text>
+          <Icon name="linkedin" size={20} color={isDark ? '#fff' : '#000'} />
+        </Pressable>
+      </View>
+    </Animated.View>
+  );
+};
 
 type Props = NativeStackScreenProps<RootStackParamList, 'Home'>;
 
@@ -188,11 +197,11 @@ export const HomeScreen = ({ navigation }: Props) => {
       <View style={[styles.header, { backgroundColor: isDark ? '#111827' : '#fff' }]}>
         <View style={styles.headerLeft}>
           <Image 
-            source={require('../assets/logo.jpg')} 
+            source={require('../assets/logo.png')} 
             style={styles.logo}
           />
           <Text style={[styles.headerTitle, { color: isDark ? '#fff' : '#000' }]}>
-            Recipe App
+            KitchenQuest
           </Text>
         </View>
         <Pressable onPress={() => setIsNavVisible(true)} style={styles.menuButton}>
