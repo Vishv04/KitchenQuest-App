@@ -1,0 +1,22 @@
+{
+  "startTime": "2025-01-03T00:46:25.284Z",
+  "sections": [
+    {
+      "section": "popular",
+      "status": "Success",
+      "recipesScraped": 12
+    },
+    {
+      "section": "trending",
+      "status": "Success",
+      "recipesScraped": 12
+    },
+    {
+      "section": "recommended",
+      "status": "Success",
+      "recipesScraped": 12
+    }
+  ],
+  "totalRecipes": 33,
+  "endTime": "2025-01-03T00:46:26.576Z"
+}
