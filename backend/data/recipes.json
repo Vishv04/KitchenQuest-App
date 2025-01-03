@@ -1,290 +1,272 @@
 [
   {
-    "title": "Barb's Gumbo",
-    "thumbnail": "",
-    "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
-  },
-  {
-    "title": "Barb's Gumbo",
-    "thumbnail": "",
-    "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
-  },
-  {
+    "id": "45809",
     "title": "Bourbon Chicken",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/45/80/9/MwuCd6HpQ5mDvn4OLRkA_0S9A9886.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "8",
+    "submittedBy": "LinMarie",
+    "record_url": "https://www.food.com/recipe/bourbon-chicken-45809"
   },
   {
+    "id": "2886",
     "title": "Best Banana Bread",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/28/86/wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "lkadlec",
+    "record_url": "https://www.food.com/recipe/best-banana-bread-2886"
   },
   {
+    "id": "27208",
     "title": "To Die for Crock Pot Roast",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/27/20/8/LoLdAamfR02FY46yIy0B_crockpot-roast-4637.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "8",
+    "submittedBy": "yooper",
+    "record_url": "https://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
   },
   {
+    "id": "89204",
     "title": "Crock-Pot Chicken With Black Beans & Cream Cheese",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/89/20/4/uxMwt1VGQ5m2ePyzwHWy_salsa-chicken-black-beans-2312.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "5",
+    "submittedBy": "Jen Santiago",
+    "record_url": "https://www.food.com/recipe/crock-pot-chicken-with-black-beans-cream-cheese-89204"
   },
   {
+    "id": "39087",
     "title": "Creamy Cajun Chicken Pasta",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/39/08/7/VPeSMiYHRce4BWsyj7Nl_0S9A5582.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "4",
+    "submittedBy": "Lorac",
+    "record_url": "https://www.food.com/recipe/creamy-cajun-chicken-pasta-39087"
   },
   {
+    "id": "35813",
     "title": "Oatmeal Raisin Cookies",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/35/81/3/KU3JVxMDRriISEG3KdPy_0S9A9740.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "Bev I Am",
+    "record_url": "https://www.food.com/recipe/oatmeal-raisin-cookies-35813"
   },
   {
+    "id": "67256",
     "title": "Best Ever Banana Cake With Cream Cheese Frosting",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/67/25/6/ErcPhaBVS2OMnh07iiZf_banana-cake-with-cream-cheese-frosting-08.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "15",
+    "submittedBy": "Rhonda J",
+    "record_url": "https://www.food.com/recipe/best-ever-banana-cake-with-cream-cheese-frosting-67256"
   },
   {
+    "id": "54257",
     "title": "Yes, Virginia There is a Great Meatloaf",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/54/25/7/1O1KC1wTKTskFlseYbws_0S9A6432.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "Nita Holleman",
+    "record_url": "https://www.food.com/recipe/yes-virginia-there-is-a-great-meatloaf-54257"
   },
   {
+    "id": "22782",
     "title": "Jo Mama's World Famous Spaghetti",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/22/78/2/xy39o2sOTtudkgyDgZtv_spaghettisauce.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "9",
+    "submittedBy": "Sharlene~W",
+    "record_url": "https://www.food.com/recipe/jo-mamas-world-famous-spaghetti-22782"
   },
   {
+    "id": "32204",
     "title": "\"Whatever Floats Your Boat\" Brownies!",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/32/20/4/yX79JawzR3CHcGEGWh4I_0S9A5678.jpg",
     "section": "popular",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "12",
+    "submittedBy": "Karen=^..^=",
+    "record_url": "https://www.food.com/recipe/quot-whatever-floats-your-boat-quot-brownies-32204"
   },
   {
-    "title": "Barb's Gumbo",
-    "thumbnail": "",
-    "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
-  },
-  {
-    "title": "Barb's Gumbo",
-    "thumbnail": "",
-    "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
-  },
-  {
+    "id": "45809",
     "title": "Bourbon Chicken",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/45/80/9/MwuCd6HpQ5mDvn4OLRkA_0S9A9886.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "8",
+    "submittedBy": "LinMarie",
+    "record_url": "https://www.food.com/recipe/bourbon-chicken-45809"
   },
   {
+    "id": "2886",
     "title": "Best Banana Bread",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/28/86/wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "lkadlec",
+    "record_url": "https://www.food.com/recipe/best-banana-bread-2886"
   },
   {
+    "id": "27208",
     "title": "To Die for Crock Pot Roast",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/27/20/8/LoLdAamfR02FY46yIy0B_crockpot-roast-4637.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "8",
+    "submittedBy": "yooper",
+    "record_url": "https://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
   },
   {
+    "id": "89204",
     "title": "Crock-Pot Chicken With Black Beans & Cream Cheese",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/89/20/4/uxMwt1VGQ5m2ePyzwHWy_salsa-chicken-black-beans-2312.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "5",
+    "submittedBy": "Jen Santiago",
+    "record_url": "https://www.food.com/recipe/crock-pot-chicken-with-black-beans-cream-cheese-89204"
   },
   {
+    "id": "39087",
     "title": "Creamy Cajun Chicken Pasta",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/39/08/7/VPeSMiYHRce4BWsyj7Nl_0S9A5582.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "4",
+    "submittedBy": "Lorac",
+    "record_url": "https://www.food.com/recipe/creamy-cajun-chicken-pasta-39087"
   },
   {
+    "id": "35813",
     "title": "Oatmeal Raisin Cookies",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/35/81/3/KU3JVxMDRriISEG3KdPy_0S9A9740.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "Bev I Am",
+    "record_url": "https://www.food.com/recipe/oatmeal-raisin-cookies-35813"
   },
   {
+    "id": "67256",
     "title": "Best Ever Banana Cake With Cream Cheese Frosting",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/67/25/6/ErcPhaBVS2OMnh07iiZf_banana-cake-with-cream-cheese-frosting-08.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "15",
+    "submittedBy": "Rhonda J",
+    "record_url": "https://www.food.com/recipe/best-ever-banana-cake-with-cream-cheese-frosting-67256"
   },
   {
+    "id": "54257",
     "title": "Yes, Virginia There is a Great Meatloaf",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/54/25/7/1O1KC1wTKTskFlseYbws_0S9A6432.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "Nita Holleman",
+    "record_url": "https://www.food.com/recipe/yes-virginia-there-is-a-great-meatloaf-54257"
   },
   {
+    "id": "22782",
     "title": "Jo Mama's World Famous Spaghetti",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/22/78/2/xy39o2sOTtudkgyDgZtv_spaghettisauce.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "9",
+    "submittedBy": "Sharlene~W",
+    "record_url": "https://www.food.com/recipe/jo-mamas-world-famous-spaghetti-22782"
   },
   {
+    "id": "32204",
     "title": "\"Whatever Floats Your Boat\" Brownies!",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/32/20/4/yX79JawzR3CHcGEGWh4I_0S9A5678.jpg",
     "section": "trending",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "12",
+    "submittedBy": "Karen=^..^=",
+    "record_url": "https://www.food.com/recipe/quot-whatever-floats-your-boat-quot-brownies-32204"
   },
   {
-    "title": "Barb's Gumbo",
-    "thumbnail": "",
-    "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
-  },
-  {
-    "title": "Barb's Gumbo",
-    "thumbnail": "",
-    "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
-  },
-  {
+    "id": "45809",
     "title": "Bourbon Chicken",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/45/80/9/MwuCd6HpQ5mDvn4OLRkA_0S9A9886.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "8",
+    "submittedBy": "LinMarie",
+    "record_url": "https://www.food.com/recipe/bourbon-chicken-45809"
   },
   {
+    "id": "2886",
     "title": "Best Banana Bread",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/28/86/wBZxNua1T8yfDwbfo9Fz_0S9A9315.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "lkadlec",
+    "record_url": "https://www.food.com/recipe/best-banana-bread-2886"
   },
   {
+    "id": "27208",
     "title": "To Die for Crock Pot Roast",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/27/20/8/LoLdAamfR02FY46yIy0B_crockpot-roast-4637.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "8",
+    "submittedBy": "yooper",
+    "record_url": "https://www.food.com/recipe/to-die-for-crock-pot-roast-27208"
   },
   {
+    "id": "89204",
     "title": "Crock-Pot Chicken With Black Beans & Cream Cheese",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/89/20/4/uxMwt1VGQ5m2ePyzwHWy_salsa-chicken-black-beans-2312.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "5",
+    "submittedBy": "Jen Santiago",
+    "record_url": "https://www.food.com/recipe/crock-pot-chicken-with-black-beans-cream-cheese-89204"
   },
   {
+    "id": "39087",
     "title": "Creamy Cajun Chicken Pasta",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/39/08/7/VPeSMiYHRce4BWsyj7Nl_0S9A5582.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "4",
+    "submittedBy": "Lorac",
+    "record_url": "https://www.food.com/recipe/creamy-cajun-chicken-pasta-39087"
   },
   {
+    "id": "35813",
     "title": "Oatmeal Raisin Cookies",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/35/81/3/KU3JVxMDRriISEG3KdPy_0S9A9740.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "Bev I Am",
+    "record_url": "https://www.food.com/recipe/oatmeal-raisin-cookies-35813"
   },
   {
+    "id": "67256",
     "title": "Best Ever Banana Cake With Cream Cheese Frosting",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/67/25/6/ErcPhaBVS2OMnh07iiZf_banana-cake-with-cream-cheese-frosting-08.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "15",
+    "submittedBy": "Rhonda J",
+    "record_url": "https://www.food.com/recipe/best-ever-banana-cake-with-cream-cheese-frosting-67256"
   },
   {
+    "id": "54257",
     "title": "Yes, Virginia There is a Great Meatloaf",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/54/25/7/1O1KC1wTKTskFlseYbws_0S9A6432.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "10",
+    "submittedBy": "Nita Holleman",
+    "record_url": "https://www.food.com/recipe/yes-virginia-there-is-a-great-meatloaf-54257"
   },
   {
+    "id": "22782",
     "title": "Jo Mama's World Famous Spaghetti",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/22/78/2/xy39o2sOTtudkgyDgZtv_spaghettisauce.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "9",
+    "submittedBy": "Sharlene~W",
+    "record_url": "https://www.food.com/recipe/jo-mamas-world-famous-spaghetti-22782"
   },
   {
+    "id": "32204",
     "title": "\"Whatever Floats Your Boat\" Brownies!",
-    "thumbnail": "",
+    "thumbnail": "https://img.sndimg.com/food/image/upload/v1/img/recipes/32/20/4/yX79JawzR3CHcGEGWh4I_0S9A5678.jpg",
     "section": "recommended",
-    "ingredients": "Ingredients not available",
-    "steps": "Steps not available",
-    "submittedBy": "Food.com"
+    "steps": "12",
+    "submittedBy": "Karen=^..^=",
+    "record_url": "https://www.food.com/recipe/quot-whatever-floats-your-boat-quot-brownies-32204"
   }
 ]

@@ -1,44 +1,4 @@
 {
-  "editorialResults": [
-    {
-      "recordType": "Recipe",
-      "main_num_ratings": "65",
-      "main_rating_mapping": "4.90",
-      "main_title": "Barb's Gumbo",
-      "main_truncated_title": "Barb's Gumbo",
-      "main_username": "Barb G.",
-      "recipe_id": "82288",
-      "recipe_photo_url": "https://img.sndimg.com/food/image/upload/w_555,h_416,fl_progressive,q_80/v1/img/recipes/82/28/8/cB14froTlmpDfRF49wmQ_gumbo%20SITE-3.jpg",
-      "recipe_totaltime": "65",
-      "recipe_user_url": "https://www.food.com/49304",
-      "record_url": "https://www.food.com/recipe/barbs-gumbo-82288",
-      "user_avatar_url": "https://graph.facebook.com/v2.0/100001151794024/picture?type=large",
-      "main_rating": "4.90",
-      "truncated_title": "Barb's Gumbo",
-      "main_num_reviews": "65",
-      "topRibbonText": "Recipe of the Day",
-      "layout": ""
-    },
-    {
-      "recordType": "Recipe",
-      "main_num_ratings": "65",
-      "main_rating_mapping": "4.90",
-      "main_title": "Barb's Gumbo",
-      "main_truncated_title": "Barb's Gumbo",
-      "main_username": "Barb G.",
-      "recipe_id": "82288",
-      "recipe_photo_url": "https://img.sndimg.com/food/image/upload/w_555,h_416,fl_progressive,q_80/v1/img/recipes/82/28/8/cB14froTlmpDfRF49wmQ_gumbo%20SITE-3.jpg",
-      "recipe_totaltime": "65",
-      "recipe_user_url": "https://www.food.com/49304",
-      "record_url": "https://www.food.com/recipe/barbs-gumbo-82288",
-      "user_avatar_url": "https://graph.facebook.com/v2.0/100001151794024/picture?type=large",
-      "main_rating": "4.90",
-      "truncated_title": "Barb's Gumbo",
-      "main_num_reviews": "65",
-      "topRibbonText": "",
-      "layout": ""
-    }
-  ],
   "results": [
     {
       "recordType": "Recipe",
