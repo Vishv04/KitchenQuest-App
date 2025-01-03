@@ -165,10 +165,34 @@ export class ScraperService {
         aggregateRating: recipeData?.aggregateRating?.ratingValue || '',
         reviewCount: recipeData?.aggregateRating?.reviewCount || '',
         nutrition: recipeData?.nutrition || {},
-        ingredients: recipeData?.recipeIngredient,
+        ingredients: recipeData?.recipeIngredient
+          ? recipeData.recipeIngredient.map((ingredient) => parseIngredient(ingredient))
+          : [],
         instructions: recipeData?.recipeInstructions || [],
         recipeYield: recipeData?.recipeYield || '',
       };
+      
+      // Helper function to parse ingredients
+      function parseIngredient(ingredient) {
+        // Remove multiple spaces and trim
+        const cleanedIngredient = ingredient.replace(/\s{2,}/g, ' ').trim();
+      
+        // Split the string into quantity and item parts
+        const quantityMatch = cleanedIngredient.match(/^([\d/.\s]+)(.*)$/);
+        if (quantityMatch) {
+          return {
+            quantity: quantityMatch[1].trim(),
+            item: quantityMatch[2].trim(),
+          };
+        }
+      
+        // If no match for quantity, assume the whole string is the item
+        return {
+          quantity: '',
+          item: cleanedIngredient,
+        };
+      }
+      
   
       // Add the detailed recipe to the list
       allDetailedRecipes.push(detailedRecipe);

@@ -25,17 +25,50 @@
       "proteinContent": "50.1"
     },
     "ingredients": [
-      "2   lbs    boneless chicken breasts, cut into bite-size pieces ",
-      "1 -2   tablespoon    olive oil",
-      "1       garlic clove, crushed ",
-      "1/4  teaspoon    ginger",
-      "3/4  teaspoon    crushed red pepper flakes",
-      "1/4  cup    apple juice",
-      "1/3  cup    light brown sugar",
-      "2   tablespoons    ketchup",
-      "1   tablespoon    cider vinegar",
-      "1/2  cup    water",
-      "1/3  cup    soy sauce"
+      {
+        "quantity": "2",
+        "item": "lbs boneless chicken breasts, cut into bite-size pieces"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 tablespoon olive oil"
+      },
+      {
+        "quantity": "1",
+        "item": "garlic clove, crushed"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon ginger"
+      },
+      {
+        "quantity": "3/4",
+        "item": "teaspoon crushed red pepper flakes"
+      },
+      {
+        "quantity": "1/4",
+        "item": "cup apple juice"
+      },
+      {
+        "quantity": "1/3",
+        "item": "cup light brown sugar"
+      },
+      {
+        "quantity": "2",
+        "item": "tablespoons ketchup"
+      },
+      {
+        "quantity": "1",
+        "item": "tablespoon cider vinegar"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup water"
+      },
+      {
+        "quantity": "1/3",
+        "item": "cup soy sauce"
+      }
     ],
     "instructions": [
       {
@@ -99,14 +132,38 @@
       "proteinContent": "3.7"
     },
     "ingredients": [
-      "1/2  cup    butter, softened ",
-      "1   cup    granulated sugar",
-      "2       eggs, beaten ",
-      "3       bananas, finely crushed  (for serious and extreme moist and delicious, try 4 bananas)",
-      "1 1/2  cups    all-purpose flour",
-      "1   teaspoon    baking soda",
-      "1/2  teaspoon    salt",
-      "1/2  teaspoon    vanilla (optional)"
+      {
+        "quantity": "1/2",
+        "item": "cup butter, softened"
+      },
+      {
+        "quantity": "1",
+        "item": "cup granulated sugar"
+      },
+      {
+        "quantity": "2",
+        "item": "eggs, beaten"
+      },
+      {
+        "quantity": "3",
+        "item": "bananas, finely crushed (for serious and extreme moist and delicious, try 4 bananas)"
+      },
+      {
+        "quantity": "1 1/2",
+        "item": "cups all-purpose flour"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon baking soda"
+      },
+      {
+        "quantity": "1/2",
+        "item": "teaspoon salt"
+      },
+      {
+        "quantity": "1/2",
+        "item": "teaspoon vanilla (optional)"
+      }
     ],
     "instructions": [
       {
@@ -178,11 +235,26 @@
       "proteinContent": "49.5"
     },
     "ingredients": [
-      "1 (4 -5   lb)    beef roast, any kind ",
-      "1 (1 1/4  ounce) package   brown gravy mix, dry ",
-      "1 (1 1/4  ounce) package   dried Italian salad dressing mix",
-      "1 (1 1/4  ounce) package   ranch dressing mix, dry ",
-      "1/2  cup    water"
+      {
+        "quantity": "1",
+        "item": "(4 -5 lb) beef roast, any kind"
+      },
+      {
+        "quantity": "1",
+        "item": "(1 1/4 ounce) package brown gravy mix, dry"
+      },
+      {
+        "quantity": "1",
+        "item": "(1 1/4 ounce) package dried Italian salad dressing mix"
+      },
+      {
+        "quantity": "1",
+        "item": "(1 1/4 ounce) package ranch dressing mix, dry"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup water"
+      }
     ],
     "instructions": [
       {
@@ -246,11 +318,26 @@
       "proteinContent": "45.9"
     },
     "ingredients": [
-      "4 -5       boneless chicken breasts, frozen ",
-      "1 (15 1/2  ounce) can   black beans",
-      "1 (15   ounce) can   corn",
-      "1 (15   ounce) jar   salsa, any kind ",
-      "1 (8   ounce) package   cream cheese"
+      {
+        "quantity": "4",
+        "item": "-5 boneless chicken breasts, frozen"
+      },
+      {
+        "quantity": "1",
+        "item": "(15 1/2 ounce) can black beans"
+      },
+      {
+        "quantity": "1",
+        "item": "(15 ounce) can corn"
+      },
+      {
+        "quantity": "1",
+        "item": "(15 ounce) jar salsa, any kind"
+      },
+      {
+        "quantity": "1",
+        "item": "(8 ounce) package cream cheese"
+      }
     ],
     "instructions": [
       {
@@ -302,18 +389,54 @@
       "proteinContent": "39.3"
     },
     "ingredients": [
-      "2       boneless skinless chicken breast halves, cut into thin strips ",
-      "4   ounces    linguine, cooked al dente ",
-      "2   teaspoons    cajun seasoning (your recipe, <a href=\"https://www.food.com/recipe/cajun-seasoning-mix-14190\">Cajun Seasoning Mix</a> or store-bought)",
-      "2   tablespoons    butter",
-      "1      thinly sliced green onion",
-      "1/2  cup    heavy whipping cream",
-      "2   tablespoons   chopped sun-dried tomatoes",
-      "1/4  teaspoon    salt",
-      "1/4  teaspoon    dried basil",
-      "1/8  teaspoon    ground black pepper",
-      "1/8  teaspoon    garlic powder",
-      "1/4  cup   grated parmesan cheese"
+      {
+        "quantity": "2",
+        "item": "boneless skinless chicken breast halves, cut into thin strips"
+      },
+      {
+        "quantity": "4",
+        "item": "ounces linguine, cooked al dente"
+      },
+      {
+        "quantity": "2",
+        "item": "teaspoons cajun seasoning (your recipe, <a href=\"https://www.food.com/recipe/cajun-seasoning-mix-14190\">Cajun Seasoning Mix</a> or store-bought)"
+      },
+      {
+        "quantity": "2",
+        "item": "tablespoons butter"
+      },
+      {
+        "quantity": "1",
+        "item": "thinly sliced green onion"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup heavy whipping cream"
+      },
+      {
+        "quantity": "2",
+        "item": "tablespoons chopped sun-dried tomatoes"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon salt"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon dried basil"
+      },
+      {
+        "quantity": "1/8",
+        "item": "teaspoon ground black pepper"
+      },
+      {
+        "quantity": "1/8",
+        "item": "teaspoon garlic powder"
+      },
+      {
+        "quantity": "1/4",
+        "item": "cup grated parmesan cheese"
+      }
     ],
     "instructions": [
       {
@@ -361,17 +484,50 @@
       "proteinContent": "3.5"
     },
     "ingredients": [
-      "2   cups    all-purpose flour",
-      "1   teaspoon    baking soda",
-      "1   teaspoon    baking powder",
-      "1   teaspoon    kosher salt",
-      "1   cup    unsalted butter, softened ",
-      "1   cup    sugar",
-      "1   cup    dark brown sugar, firmly packed ",
-      "2   large    eggs",
-      "2   teaspoons    vanilla",
-      "3   cups    oats (not instant)",
-      "1 1/2  cups    raisins"
+      {
+        "quantity": "2",
+        "item": "cups all-purpose flour"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon baking soda"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon baking powder"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon kosher salt"
+      },
+      {
+        "quantity": "1",
+        "item": "cup unsalted butter, softened"
+      },
+      {
+        "quantity": "1",
+        "item": "cup sugar"
+      },
+      {
+        "quantity": "1",
+        "item": "cup dark brown sugar, firmly packed"
+      },
+      {
+        "quantity": "2",
+        "item": "large eggs"
+      },
+      {
+        "quantity": "2",
+        "item": "teaspoons vanilla"
+      },
+      {
+        "quantity": "3",
+        "item": "cups oats (not instant)"
+      },
+      {
+        "quantity": "1 1/2",
+        "item": "cups raisins"
+      }
     ],
     "instructions": [
       {
@@ -443,21 +599,66 @@
       "proteinContent": "5.5"
     },
     "ingredients": [
-      "1 1/2  cups    bananas, mashed, ripe ",
-      "2   teaspoons    lemon juice",
-      "3   cups    flour",
-      "1 1/2  teaspoons    baking soda",
-      "1/4  teaspoon    salt",
-      "3/4  cup    butter, softened ",
-      "2 1/8  cups    sugar",
-      "3   large    eggs",
-      "2   teaspoons    vanilla",
-      "1 1/2  cups    buttermilk",
-      "1/2  cup    butter, softened ",
-      "1 (8   ounce) package   cream cheese, softened ",
-      "1   teaspoon    vanilla",
-      "3 1/2  cups    icing sugar",
-      " chopped walnuts"
+      {
+        "quantity": "1 1/2",
+        "item": "cups bananas, mashed, ripe"
+      },
+      {
+        "quantity": "2",
+        "item": "teaspoons lemon juice"
+      },
+      {
+        "quantity": "3",
+        "item": "cups flour"
+      },
+      {
+        "quantity": "1 1/2",
+        "item": "teaspoons baking soda"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon salt"
+      },
+      {
+        "quantity": "3/4",
+        "item": "cup butter, softened"
+      },
+      {
+        "quantity": "2 1/8",
+        "item": "cups sugar"
+      },
+      {
+        "quantity": "3",
+        "item": "large eggs"
+      },
+      {
+        "quantity": "2",
+        "item": "teaspoons vanilla"
+      },
+      {
+        "quantity": "1 1/2",
+        "item": "cups buttermilk"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup butter, softened"
+      },
+      {
+        "quantity": "1",
+        "item": "(8 ounce) package cream cheese, softened"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon vanilla"
+      },
+      {
+        "quantity": "3 1/2",
+        "item": "cups icing sugar"
+      },
+      {
+        "quantity": "",
+        "item": "chopped walnuts"
+      }
     ],
     "instructions": [
       {
@@ -549,17 +750,50 @@
       "proteinContent": "35.5"
     },
     "ingredients": [
-      "1 1/2  lbs    ground beef (ground shoulder roast is good)",
-      "1   slice    bread (broken or chopped finely)",
-      "1       egg",
-      "1   small    vidalia onions or 1   small   type sweet onion, finely chopped ",
-      "1   teaspoon    table salt",
-      "1/4  teaspoon    black pepper",
-      "4   tablespoons    ketchup",
-      "1/2-2/3  cup    whole milk or 1/2-2/3  cup    half-and-half",
-      "4   tablespoons    apple cider vinegar",
-      "2 -4   tablespoons    dark brown sugar, packed firm  (to taste)",
-      "1/2  cup    ketchup"
+      {
+        "quantity": "1 1/2",
+        "item": "lbs ground beef (ground shoulder roast is good)"
+      },
+      {
+        "quantity": "1",
+        "item": "slice bread (broken or chopped finely)"
+      },
+      {
+        "quantity": "1",
+        "item": "egg"
+      },
+      {
+        "quantity": "1",
+        "item": "small vidalia onions or 1 small type sweet onion, finely chopped"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon table salt"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon black pepper"
+      },
+      {
+        "quantity": "4",
+        "item": "tablespoons ketchup"
+      },
+      {
+        "quantity": "1/2",
+        "item": "-2/3 cup whole milk or 1/2-2/3 cup half-and-half"
+      },
+      {
+        "quantity": "4",
+        "item": "tablespoons apple cider vinegar"
+      },
+      {
+        "quantity": "2",
+        "item": "-4 tablespoons dark brown sugar, packed firm (to taste)"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup ketchup"
+      }
     ],
     "instructions": [
       {
@@ -631,22 +865,70 @@
       "proteinContent": "29.8"
     },
     "ingredients": [
-      "2   lbs    Italian sausage, casings removed  (mild or hot)",
-      "1   small    onion, chopped  (optional)",
-      "3 -4       garlic cloves, minced ",
-      "1 (28   ounce) can   diced tomatoes",
-      "2 (6   ounce) cans   tomato paste",
-      "2 (15   ounce) cans   tomato sauce",
-      "2   cups    water (for a long period of simmering for flavors to meld. If you don't want to simmer it as long, add less)",
-      "3   teaspoons    basil",
-      "2   teaspoons    dried parsley flakes",
-      "1 1/2  teaspoons    brown sugar",
-      "1   teaspoon    salt",
-      "1/4-1/2  teaspoon    crushed red pepper flakes",
-      "1/4  teaspoon    fresh coarse ground black pepper",
-      "1/4  cup    red wine (a good Cabernet!)",
-      "1   lb    thin spaghetti",
-      "  parmesan cheese"
+      {
+        "quantity": "2",
+        "item": "lbs Italian sausage, casings removed (mild or hot)"
+      },
+      {
+        "quantity": "1",
+        "item": "small onion, chopped (optional)"
+      },
+      {
+        "quantity": "3",
+        "item": "-4 garlic cloves, minced"
+      },
+      {
+        "quantity": "1",
+        "item": "(28 ounce) can diced tomatoes"
+      },
+      {
+        "quantity": "2",
+        "item": "(6 ounce) cans tomato paste"
+      },
+      {
+        "quantity": "2",
+        "item": "(15 ounce) cans tomato sauce"
+      },
+      {
+        "quantity": "2",
+        "item": "cups water (for a long period of simmering for flavors to meld. If you don't want to simmer it as long, add less)"
+      },
+      {
+        "quantity": "3",
+        "item": "teaspoons basil"
+      },
+      {
+        "quantity": "2",
+        "item": "teaspoons dried parsley flakes"
+      },
+      {
+        "quantity": "1 1/2",
+        "item": "teaspoons brown sugar"
+      },
+      {
+        "quantity": "1",
+        "item": "teaspoon salt"
+      },
+      {
+        "quantity": "1/4",
+        "item": "-1/2 teaspoon crushed red pepper flakes"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon fresh coarse ground black pepper"
+      },
+      {
+        "quantity": "1/4",
+        "item": "cup red wine (a good Cabernet!)"
+      },
+      {
+        "quantity": "1",
+        "item": "lb thin spaghetti"
+      },
+      {
+        "quantity": "",
+        "item": "parmesan cheese"
+      }
     ],
     "instructions": [
       {
@@ -714,20 +996,62 @@
       "proteinContent": "6.1"
     },
     "ingredients": [
-      "1/2  cup    butter, melted ",
-      "1/2  cup    unsweetened cocoa",
-      "1   cup    sugar",
-      "2       eggs",
-      "2   teaspoons    vanilla",
-      "1/2  cup    flour",
-      "1/4  teaspoon    salt",
-      "1 -2   cup    chocolate chips (semisweet, white, butterscotch, peanut butter)",
-      "1 -2   cup    raisins",
-      "1 -2   cup   chopped maraschino cherry",
-      "1 -2   cup   chopped nuts",
-      "1 -2   cup    M&M'",
-      "1 -2   cup    Reese's pieces",
-      "1 -2   cup    miniature marshmallow"
+      {
+        "quantity": "1/2",
+        "item": "cup butter, melted"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup unsweetened cocoa"
+      },
+      {
+        "quantity": "1",
+        "item": "cup sugar"
+      },
+      {
+        "quantity": "2",
+        "item": "eggs"
+      },
+      {
+        "quantity": "2",
+        "item": "teaspoons vanilla"
+      },
+      {
+        "quantity": "1/2",
+        "item": "cup flour"
+      },
+      {
+        "quantity": "1/4",
+        "item": "teaspoon salt"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup chocolate chips (semisweet, white, butterscotch, peanut butter)"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup raisins"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup chopped maraschino cherry"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup chopped nuts"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup M&M'"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup Reese's pieces"
+      },
+      {
+        "quantity": "1",
+        "item": "-2 cup miniature marshmallow"
+      }
     ],
     "instructions": [
       {
