@@ -8,4 +8,5 @@ export interface Recipe {
   reviews: string;
   cookTime: string;
   submittedBy: string;
+  recipe_id: string;
 } 

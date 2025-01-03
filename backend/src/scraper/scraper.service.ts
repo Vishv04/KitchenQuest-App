@@ -1,13 +1,17 @@
 import { Injectable } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
+import { InjectRepository } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
+import { Recipe } from '../recipes/entities/recipes.entity';
+import { RecipeContent } from '../recipes/entities/recipes-content.entity';
 import axios from 'axios';
 import * as cheerio from 'cheerio';
 import * as fs from 'fs';
 import * as path from 'path';
 
 // Define types for better type safety
-interface Recipe {
-  id: string,
+interface RecipeData {
+  recipe_id: string,
   title: string;
   thumbnail: string;
   section: string;
@@ -22,8 +26,12 @@ export class ScraperService {
   private readonly recipesFilePath = path.join(__dirname, '..', '..', 'data', 'recipes.json');
   private readonly detailedRecipesFilePath = path.join(__dirname, '..', '..', 'data', 'detailedRecipes.json');
 
-  constructor() {
-    // Ensure the data directory exists
+  constructor(
+    @InjectRepository(Recipe)
+    private readonly recipeRepository: Repository<Recipe>,
+    @InjectRepository(RecipeContent)
+    private readonly recipeContentRepository: Repository<RecipeContent>,
+  ) {
     const dataDir = path.join(__dirname, '..', '..', 'data');
     if (!fs.existsSync(dataDir)) {
       fs.mkdirSync(dataDir, { recursive: true });
@@ -40,7 +48,7 @@ export class ScraperService {
 
     try {
       const sections = ['popular', 'trending', 'recommended'];
-      let allRecipes: Recipe[] = [];
+      let allRecipes: RecipeData[] = [];
       let allDetailedRecipes: any[] = [];
       const seenRecipes = new Set<string>();
       const UniquerecordUrls = new Set<string>();
@@ -87,7 +95,7 @@ export class ScraperService {
         console.log(`Extracted ${results.length} recipes from response`);
 
         const recipes = [...results].map((item) => ({
-          id: item.recipe_id || "",
+          recipe_id: item.recipe_id || "",
           title: item.main_title || 'No Title',
           thumbnail: item.recipe_photo_url || '',
           section,
@@ -112,8 +120,9 @@ export class ScraperService {
 
       const recordUrls: string[] = Array.from(UniquerecordUrls);
 
-      // Save all recipes to a file
+      // Save recipes to both file and database
       await this.saveToFile(this.recipesFilePath, allRecipes, false);
+      await this.saveRecipesToDatabase(allRecipes);
 
       // Scrape detailed data from each record URL
       for (const recordUrl of recordUrls) {
@@ -121,8 +130,9 @@ export class ScraperService {
         await this.scrapeDetailedRecipe(recordUrl, recipeId, allDetailedRecipes);
       }
 
-      // Save detailed recipes
+      // Save detailed recipes to both file and database
       await this.saveToFile(this.detailedRecipesFilePath, allDetailedRecipes, false);
+      await this.saveDetailedRecipesToDatabase(allDetailedRecipes);
 
       console.log(`[${new Date().toISOString()}] Scraping complete. Total recipes: ${allRecipes.length}`);
     } catch (error) {
@@ -246,6 +256,81 @@ export class ScraperService {
       }
     } catch (error) {
       console.error(`Error saving to file ${filePath}:`, error);
+      throw error;
+    }
+  }
+
+  private async saveRecipesToDatabase(recipes: any[]) {
+    try {
+      // Clear existing recipes
+      await this.recipeRepository.clear();
+      
+      // Save new recipes
+      const recipeEntities = recipes
+        .filter(recipe => recipe.recipe_id) // Filter out recipes with no ID
+        .map(recipe => {
+          const recipeEntity = new Recipe();
+          // Ensure recipe_id is a valid number
+          const parsedId = parseInt(recipe.recipe_id);
+          if (isNaN(parsedId)) {
+            console.warn(`Invalid recipe_id: ${recipe.recipe_id} for recipe: ${recipe.title}`);
+            return null;
+          }
+          recipeEntity.recipe_id = parsedId;
+          recipeEntity.title = recipe.title;
+          recipeEntity.thumbnail = recipe.thumbnail;
+          recipeEntity.section = recipe.section;
+          recipeEntity.steps = recipe.steps;
+          recipeEntity.submittedBy = recipe.submittedBy;
+          recipeEntity.record_url = recipe.record_url;
+          return recipeEntity;
+        })
+        .filter(entity => entity !== null); // Remove any null entities
+
+      if (recipeEntities.length === 0) {
+        console.warn('No valid recipes to save to database');
+        return;
+      }
+
+      await this.recipeRepository.save(recipeEntities);
+      console.log(`Saved ${recipeEntities.length} recipes to database`);
+    } catch (error) {
+      console.error('Error saving recipes to database:', error);
+      throw error;
+    }
+  }
+
+  private async saveDetailedRecipesToDatabase(detailedRecipes: any[]) {
+    try {
+      // Clear existing detailed recipes
+      await this.recipeContentRepository.clear();
+      
+      // Save new detailed recipes
+      const detailedRecipeEntities = detailedRecipes.map(recipe => {
+        const recipeContentEntity = new RecipeContent();
+        recipeContentEntity.recipe_id = parseInt(recipe.recipe_id);
+        recipeContentEntity.title = recipe.title;
+        recipeContentEntity.description = recipe.description;
+        recipeContentEntity.url = recipe.url;
+        recipeContentEntity.author = recipe.author;
+        recipeContentEntity.cookTime = recipe.cookTime;
+        recipeContentEntity.prepTime = recipe.prepTime;
+        recipeContentEntity.totalTime = recipe.totalTime;
+        recipeContentEntity.recipeCategory = recipe.recipeCategory;
+        recipeContentEntity.keywords = recipe.keywords;
+        recipeContentEntity.aggregateRating = recipe.aggregateRating;
+        recipeContentEntity.reviewCount = recipe.reviewCount;
+        recipeContentEntity.nutrition = recipe.nutrition;
+        recipeContentEntity.ingredients = recipe.ingredients;
+        recipeContentEntity.instructions = recipe.instructions;
+        recipeContentEntity.recipeYield = recipe.recipeYield;
+        return recipeContentEntity;
+      });
+
+      await this.recipeContentRepository.save(detailedRecipeEntities);
+      console.log(`Saved ${detailedRecipeEntities.length} detailed recipes to database`);
+    } catch (error) {
+      console.error('Error saving detailed recipes to database:', error);
       throw error;
     }
   }

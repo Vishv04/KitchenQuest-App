@@ -11,8 +11,12 @@
   },
   "dependencies": {
     "@nestjs/config": "^3.3.0",
+    "@nestjs/typeorm": "^10.0.2",
+    "dotenv": "^16.4.7",
+    "pg": "^8.13.1",
     "react": "18.3.1",
-    "react-native": "0.76.5"
+    "react-native": "0.76.5",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
