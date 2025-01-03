@@ -1,79 +1,195 @@
-This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
+# KitchenQuest - Recipe Explorer App
 
-# Getting Started
+## Table of Contents
 
->**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
+- [Introduction](#introduction)
+- [Features](#features)
+- [Technologies Used](#technologies-used)
+- [Getting Started](#getting-started)
+  - [Prerequisites](#prerequisites)
+  - [Installation](#installation)
+  - [Running the Application](#running-the-application)
+- [Backend Setup](#backend-setup)
+  - [Database Configuration](#database-configuration)
+  - [Running the Backend](#running-the-backend)
+- [API Endpoints](#api-endpoints)
+- [Scraping Service](#scraping-service)
+- [Testing](#testing)
+- [Contributing](#contributing)
+- [License](#license)
 
-## Step 1: Start the Metro Server
+## Introduction
 
-First, you will need to start **Metro**, the JavaScript _bundler_ that ships _with_ React Native.
+KitchenQuest is a mobile application designed to help users discover, explore, and manage a variety of recipes. Built using **React Native** for the user interface, **NestJS** for the backend, and **PostgreSQL** as the database, this app provides a seamless experience for cooking enthusiasts.
 
-To start Metro, run the following command from the _root_ of your React Native project:
+## ScreenShots
 
+
+## Technologies Used
+
+- **Frontend**: 
+  - React Native
+  - React Navigation
+  - Axios for API calls
+  - React Native Vector Icons
+  - ESLint and Prettier for code quality
+
+- **Backend**: 
+  - NestJS
+  - TypeORM for database interaction
+  - PostgreSQL as the database
+  - Axios for web scraping
+
+- **Development Tools**: 
+  - Node.js
+  - npm
+
+### Frontend (React Native)
+
+- **Home Screen**: 
+  - Displays three cards representing different recipe sections (e.g., Popular, Desserts, Quick Meals).
+  - Each card shows a relevant cover image and section title.
+  - Smooth navigation to the recipe list when a card is tapped.
+
+- **Recipe List Screen**: 
+  - Displays a grid layout of recipes for the selected section.
+  - Each recipe card shows:
+    - Recipe thumbnail
+    - Recipe title
+
+- **Recipe Detail Screen**: 
+  - Displays a hero image of the recipe.
+  - Shows the recipe title and basic information.
+  - Lists ingredients.
+  - Provides step-by-step cooking directions.
+  - Displays attribution ("Submitted by").
+
+### Backend (NestJS)
+
+- **Scraping Service**: 
+  - Scheduled hourly scraping using NestJS cron jobs.
+  - Scrapes only the first load of recipes from sections without clicking "VIEW MORE".
+  - Implements a data deduplication strategy to avoid duplicate entries.
+
+- **API Endpoints**:
+  - `GET /sections/:sectionType/recipes`: List recipes by section.
+  - `GET /recipes/:id`: Get detailed recipe information.
+  - Proper error handling and status codes.
+
+### Database (PostgreSQL)
+
+- Stores essential recipe metadata and content.
+- Implements proper indexing for efficient queries.
+
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have the following installed:
+
+- Node.js (version 18 or higher)
+- npm (Node package manager)
+- PostgreSQL database
+- React Native CLI
+
+### Installation
+
+1. **Clone the repository:**
+
+   ```bash
+   git clone https://github.com/vishv0407/Recipe-Explorer-App.git
+   cd Recipe-Explore-App
+   ```
+
+2. **Install frontend dependencies:**
+
+   Navigate to the frontend directory and install the dependencies:
+
+   ```bash
+   npm install
+   ```
+
+3. **Install backend dependencies:**
+
+   Navigate to the backend directory and install the dependencies:
+
+   ```bash
+   cd backend
+   npm install
+   ```
+
+### Running the Application
+
+1. **Start the Metro Server:**
+
+   From the root of your React Native project, run:
+
+   ```bash
+   npm start
+   ```
+
+2. **Run the Android or iOS application:**
+
+   For Android:
+
+   ```bash
+   npx react-native run android
+   ```
+
+   For iOS:
+
+   ```bash
+   npm run ios
+   ```
+
+## Backend Setup
+
+### Database Configuration
+
+1. **Create a PostgreSQL database:**
+
+   Create a new database for the Recipe Explorer app. You can use the following command in your PostgreSQL shell:
+
+   ```sql
+   CREATE DATABASE recipe_explorer;
+   ```
+
+### Running the Backend
+
+1. **Start the NestJS server:**
+
+   From the backend directory, run:
+
+   ```bash
+   npm run start:dev
+   ```
+
+   This will start the backend server in development mode.
+
+## .env setup
+
+# Database Configuration
+
+The following environment variables are used to configure the database connection:
 ```bash
-# using npm
-npm start
-
-# OR using Yarn
-yarn start
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
+DATABASE_USERNAME=myusername
+DATABASE_PASSWORD=mypassword
+DATABASE_NAME=mydatabase
 ```
 
-## Step 2: Start your Application
+## Contributing
 
-Let Metro Bundler run in its _own_ terminal. Open a _new_ terminal from the _root_ of your React Native project. Run the following command to start your _Android_ or _iOS_ app:
+Contributions are welcome! If you would like to contribute to the Recipe Explorer app, please follow these steps:
 
-### For Android
+1. Fork the repository.
+2. Create a new branch (`git checkout -b feature/YourFeature`).
+3. Make your changes and commit them (`git commit -m 'Add some feature'`).
+4. Push to the branch (`git push origin feature/YourFeature`).
+5. Create a new Pull Request.
 
-```bash
-# using npm
-npm run android
+## License
 
-# OR using Yarn
-yarn android
-```
-
-### For iOS
-
-```bash
-# using npm
-npm run ios
-
-# OR using Yarn
-yarn ios
-```
-
-If everything is set up _correctly_, you should see your new app running in your _Android Emulator_ or _iOS Simulator_ shortly provided you have set up your emulator/simulator correctly.
-
-This is one way to run your app — you can also run it directly from within Android Studio and Xcode respectively.
-
-## Step 3: Modifying your App
-
-Now that you have successfully run the app, let's modify it.
-
-1. Open `App.tsx` in your text editor of choice and edit some lines.
-2. For **Android**: Press the <kbd>R</kbd> key twice or select **"Reload"** from the **Developer Menu** (<kbd>Ctrl</kbd> + <kbd>M</kbd> (on Window and Linux) or <kbd>Cmd ⌘</kbd> + <kbd>M</kbd> (on macOS)) to see your changes!
-
-   For **iOS**: Hit <kbd>Cmd ⌘</kbd> + <kbd>R</kbd> in your iOS Simulator to reload the app and see your changes!
-
-## Congratulations! :tada:
-
-You've successfully run and modified your React Native App. :partying_face:
-
-### Now what?
-
-- If you want to add this new React Native code to an existing application, check out the [Integration guide](https://reactnative.dev/docs/integration-with-existing-apps).
-- If you're curious to learn more about React Native, check out the [Introduction to React Native](https://reactnative.dev/docs/getting-started).
-
-# Troubleshooting
-
-If you can't get this to work, see the [Troubleshooting](https://reactnative.dev/docs/troubleshooting) page.
-
-# Learn More
-
-To learn more about React Native, take a look at the following resources:
-
-- [React Native Website](https://reactnative.dev) - learn more about React Native.
-- [Getting Started](https://reactnative.dev/docs/environment-setup) - an **overview** of React Native and how setup your environment.
-- [Learn the Basics](https://reactnative.dev/docs/getting-started) - a **guided tour** of the React Native **basics**.
-- [Blog](https://reactnative.dev/blog) - read the latest official React Native **Blog** posts.
-- [`@facebook/react-native`](https://github.com/facebook/react-native) - the Open Source; GitHub **repository** for React Native.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
