@@ -3,8 +3,9 @@
 ## Table of Contents
 
 - [Introduction](#introduction)
-- [Features](#features)
+- [Screenshots](#Screenshots)
 - [Technologies Used](#technologies-used)
+- [Features](#features)
 - [Getting Started](#getting-started)
   - [Prerequisites](#prerequisites)
   - [Installation](#installation)
@@ -12,9 +13,6 @@
 - [Backend Setup](#backend-setup)
   - [Database Configuration](#database-configuration)
   - [Running the Backend](#running-the-backend)
-- [API Endpoints](#api-endpoints)
-- [Scraping Service](#scraping-service)
-- [Testing](#testing)
 - [Contributing](#contributing)
 - [License](#license)
 
@@ -22,7 +20,7 @@
 
 KitchenQuest is a mobile application designed to help users discover, explore, and manage a variety of recipes. Built using **React Native** for the user interface, **NestJS** for the backend, and **PostgreSQL** as the database, this app provides a seamless experience for cooking enthusiasts.
 
-## ScreenShots
+## Screenshots
 
 ![Dark theme KitchenQuest](https://github.com/user-attachments/assets/5fa263e2-1104-4ac9-a4e5-389e533bf34a)
 ![light theme KitchenQuest](https://github.com/user-attachments/assets/c4cabb42-6f1f-4989-95f4-31ebb0037d4d)
@@ -156,6 +154,18 @@ Before you begin, ensure you have the following installed:
    ```sql
    CREATE DATABASE recipe_explorer;
    ```
+2. **.env setup:**
+
+# Database Configuration in backend directory
+
+The following environment variables are used to configure the database connection:
+```bash
+DATABASE_HOST=127.0.0.1
+DATABASE_PORT=5432
+DATABASE_USERNAME=myusername
+DATABASE_PASSWORD=mypassword
+DATABASE_NAME=mydatabase
+```
 
 ### Running the Backend
 
@@ -169,18 +179,6 @@ Before you begin, ensure you have the following installed:
 
    This will start the backend server in development mode.
 
-## .env setup
-
-# Database Configuration
-
-The following environment variables are used to configure the database connection:
-```bash
-DATABASE_HOST=127.0.0.1
-DATABASE_PORT=5432
-DATABASE_USERNAME=myusername
-DATABASE_PASSWORD=mypassword
-DATABASE_NAME=mydatabase
-```
 
 ## Contributing
 
