@@ -23,6 +23,7 @@ KitchenQuest is a mobile application designed to help users discover, explore, a
 ## Screenshots
 
 ![Dark theme KitchenQuest](https://github.com/user-attachments/assets/5fa263e2-1104-4ac9-a4e5-389e533bf34a)
+
 ![light theme KitchenQuest](https://github.com/user-attachments/assets/c4cabb42-6f1f-4989-95f4-31ebb0037d4d)
 
 ## Technologies Used
