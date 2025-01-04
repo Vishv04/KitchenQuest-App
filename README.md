@@ -162,12 +162,12 @@ Before you begin, ensure you have the following installed:
 2. **.env setup:**
 
    The following environment variables are used to configure the database connection:
-```bash
-DATABASE_HOST=127.0.0.1
-DATABASE_PORT=5432
-DATABASE_USERNAME=myusername
-DATABASE_PASSWORD=mypassword
-DATABASE_NAME=mydatabase
+   ```bash
+   DATABASE_HOST=localhost
+   DATABASE_PORT=5432
+   DATABASE_USERNAME=myusername
+   DATABASE_PASSWORD=mypassword
+   DATABASE_NAME=mydatabase
 ```
 
 ### Running the Backend
