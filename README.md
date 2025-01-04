@@ -161,7 +161,7 @@ Before you begin, ensure you have the following installed:
    ```
 2. **.env setup:**
 
-# Database Configuration in backend directory
+### Database Configuration in backend directory
 
 The following environment variables are used to configure the database connection:
 ```bash
