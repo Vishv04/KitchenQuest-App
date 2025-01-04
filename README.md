@@ -161,9 +161,7 @@ Before you begin, ensure you have the following installed:
    ```
 2. **.env setup:**
 
-### Database Configuration in backend directory
-
-The following environment variables are used to configure the database connection:
+   The following environment variables are used to configure the database connection:
 ```bash
 DATABASE_HOST=127.0.0.1
 DATABASE_PORT=5432
