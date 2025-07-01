@@ -1,4 +1,4 @@
-const BASE_URL = 'http://192.168.0.31:3000';
+const BASE_URL = 'https://kitchenquest-app.onrender.com';
 
 export const fetchRecipesBySection = async (sectionType: string) => {
   try {
