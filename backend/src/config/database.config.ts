@@ -8,8 +8,11 @@ export const databaseConfig: TypeOrmModuleOptions = {
   host: process.env.DATABASE_HOST || 'localhost',
   port: parseInt(process.env.DATABASE_PORT, 10) || 5432,
   username: process.env.DATABASE_USERNAME,
-  password: process.env.DATABASE_PASSWORD,
+  password: String(process.env.DATABASE_PASSWORD),
   database: process.env.DATABASE_NAME,
   autoLoadEntities: true,
   synchronize: true, // Set to false in production
+  ssl: {
+    rejectUnauthorized: false, // Required for Render PostgreSQL
+  },
 };
